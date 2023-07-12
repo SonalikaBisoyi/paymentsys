@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="payment.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+
+    <title>Card Details and OTP</title>
+   
+
+</head>
+
+<body>
+    <div class="container">
+        <h1>Card Details</h1>
+        <form id="cardForm">
+            <label for="cardNumber">Card Number:</label>
+            <input type="text" id="cardNumber" placeholder="Card Number" required>
+            <span id="cardNumberError" class="error-message"></span>
+
+
+            <label for="expiryDate">Expiry Date:</label>
+            <input type="text" id="expiryDate" placeholder="Expiry Date" required>
+            <div id="expiryDatePicker"></div>
+
+
+
+            <label for="cvv">CVV:</label>
+            <input type="password" id="cvv" required>
+
+            <button type="submit">Generate OTP</button>
+        </form>
+
+        <div id="otpContainer" class="hidden">
+            <h2>Enter OTP</h2>
+            <input type="text" id="otp" required>
+            <button id="verifyOTP">Verify</button>
+        </div>
+
+        <div id="successMessage" class="hidden">
+            <h2>Payment Successful!</h2>
+            <p>Thank you for your purchase.</p>
+        </div>
+    </div>
+
+    <script src="payment.js"></script>
+  
+</body>
+
+</html>  
